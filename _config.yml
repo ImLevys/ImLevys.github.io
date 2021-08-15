@@ -1,5 +1,5 @@
 theme: jekyll-theme-slate
-title: ImLevys
+title: :title
 permalink: /:title
 baseurl: ""
 
