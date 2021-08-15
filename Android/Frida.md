@@ -18,7 +18,7 @@ by Or Levy
 <h2 style="color:#ffffff">Frida Installation</h2>
 
 ```diff
-! ⚠️ Must install same version of Frida server and Frida client
+! ⚠️ Must install same version of Frida server and Frida client@@
 ```
 ```bash
 1. adb shell push <frida-server> /data/local/tmp/ (upload frida-server to device)
