@@ -1,3 +1,6 @@
+---
+title: Frida
+---
 ![alt text](https://github.com/ImLevys/ImLevys.github.io/blob/main/Android/images/frida.png?raw=true) 
 
 by Or Levy 
