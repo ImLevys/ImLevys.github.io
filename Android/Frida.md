@@ -1,7 +1,7 @@
 ![alt text](https://github.com/ImLevys/ImLevys.github.io/blob/main/Android/images/frida.png?raw=true) 
 
 by Or Levy 
->ℹ️ **Reference**
+> **Reference**
 
  [Download Frida-Server](https://github.com/frida/frida/releases) 
  
@@ -16,8 +16,9 @@ by Or Levy
  [Examples](https://github.com/11x256/frida-android-examples)
 
 <h2 style="color:#ffffff">Frida Installation</h2>
-
->**⚠️ Must install same version of Frida server and Frida client**
+```diff
+!>**⚠️ Must install same version of Frida server and Frida client**
+```
 ```bash
 1. adb shell push <frida-server> /data/local/tmp/ (upload frida-server to device)
 2. adb shell chmod 755 /data/local/tmp/<frida-server>
