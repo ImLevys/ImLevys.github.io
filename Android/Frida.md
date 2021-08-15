@@ -58,7 +58,8 @@ var myString = javaString.$new('New String Here');
 
 <h5 style="color:#ff99dd">Overload </h5>
 
-![alt text](https://raw.githubusercontent.com/ImLevys/ImLevys.github.io/53f5941e582edfee24e9573542f086f782a2b513/Android/images/overload.svg)
+> **If there are more than one function named func:** 
+> we should use overload!
 ```java
 activity.func.overload("int" , "int").implementation = function(x,y){
 
