@@ -26,98 +26,98 @@ pip3 install objection
 
 <h2 style="color:#000000">Commands</h2>
 
-<h4 style="color:#FFB6C1">Path information</h4>
+<h4 style="color:#008B8B">Path information</h4>
 
 ```bash
 env
 ```
 
-<h4 style="color:#FFB6C1">disable SSL Pinning</h4>
+<h4 style="color:#008B8B">disable SSL Pinning</h4>
 
 ```bash
 android sslpinning disable
 ```
 
-<h4 style="color:#FFB6C1">disable root detection</h4>
+<h4 style="color:#008B8B">disable root detection</h4>
 
 ```bash
 android root disable
 ```
 
-<h4 style="color:#FFB6C1">Simulate a rooted Android environment</h4>
+<h4 style="color:#008B8B">Simulate a rooted Android environment</h4>
 
 ```bash
 android root simulate
 ```
 
-<h4 style="color:#FFB6C1">Exec Command</h4>
+<h4 style="color:#008B8B">Exec Command</h4>
 
 ```bash
 android shell_exec whoami 
 ```
 
-<h4 style="color:#FFB6C1">Screenshot</h4>
+<h4 style="color:#008B8B">Screenshot</h4>
 
 ```bash
 android ui screenshot /tmp/screenshot 
 ```
 
-<h4 style="color:#FFB6C1">List activities</h4>
+<h4 style="color:#008B8B">List activities</h4>
 
 ```bash
 android hooking list activities
 ```
 
-<h4 style="color:##FFB6C1">List services</h4>
+<h4 style="color:#008B8B">List services</h4>
 
 ```bash
 android hooking list services
 ```
 
-<h4 style="color:#FFB6C1">List receivers</h4>
+<h4 style="color:#008B8B">List receivers</h4>
 
 ```bash
 android hooking list receivers 
 ```
 
-<h4 style="color:#FFB6C1">Getting current activity</h4>
+<h4 style="color:#008B8B">Getting current activity</h4>
 
 ```bash
 android hooking get current_activity 
 ```
 
-<h4 style="color:##FFB6C1">Search Classes</h4>
+<h4 style="color:#008B8B">Search Classes</h4>
 
 ```bash
 android hooking search classes <package.name>
 ```
 
-<h4 style="color:#FFB6C1">Search Methods of a Class</h4>
+<h4 style="color:#008B8B">Search Methods of a Class</h4>
 
 ```bash
 android hooking search methods <package.name <activity.name> 
 ```
 
-<h2 style="color:#000000"Hooking Commands</h2>
+<h2 style="color:#000000">Hooking Commands</h2>
 
-<h4 style="color:#FFB6C1">try to dump all possible information each time the function is called</h4>
+<h4 style="color:#008B8B">try to dump all possible information each time the function is called</h4>
 
 ```bash
 android hooking watch class_method <package>.<activity>.<function> --dump-args --dump-backtrace --dump-return
 ```
-<h4 style="color:#FFB6C1"> try to dump all possible information each time the class is called</h4>
+<h4 style="color:#008B8B"> try to dump all possible information each time the class is called</h4>
 
 ```bash 
 android hooking watch class <package>.<activity> --dump-args --dump-backtrace --dump-return
 ```
 
-<h4 style="color:#FFB6C1">Changing boolean return value of a function</h4>
+<h4 style="color:#008B8B">Changing boolean return value of a function</h4>
 
 ```bash
 android hooking set return_value <package>.<activity>.<function> <true/false> 
 ```
 
-<h4 style="color:#FFB6C1">allow users to view materials while the app is minimized</h4>
+<h4 style="color:#008B8B">allow users to view materials while the app is minimized</h4>
 
 ```bash
 android ui FLAG_SECURE false
