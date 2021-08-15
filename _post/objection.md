@@ -38,7 +38,7 @@ env
 android sslpinning disable
 ```
 
-<h4 style="color:##FFB6C1">disable root detection</h4>
+<h4 style="color:#FFB6C1">disable root detection</h4>
 
 ```bash
 android root disable
