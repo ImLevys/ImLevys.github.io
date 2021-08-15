@@ -11,83 +11,120 @@ by Or Levy
 
 [Objection Tutotrial by hacktricks](https://book.hacktricks.xyz/mobile-apps-pentesting/android-app-pentesting/frida-tutorial/objection-tutorial)
 
-**Installation**
-```bash
+<h2 style="color:#000000">Installation</h2>
+
+```javascript
 pip3 install objection
 ```
-**Run**
-```bash
+<h2 style="color:#000000">Run</h2>
+
+```javascript
 1. run frida-server on device
 2. objection --gadget <app> explore  (start objection)
 ```
 
-**Commands**
-information (like passwords or paths) could be find inside the environment
-```bash
+<h2 style="color:#000000">Commands</h2>
+
+<h4 style="color:##FFB6C1">Path information</h4>
+
+```javascript
 env
 ```
-Attempts to disable SSL Pinning on Android devices
-```bash
+
+<h4 style="color:##FFB6C1">disable SSL Pinning<h/4>
+
+```javascript
 android sslpinning disable
 ```
-Attempts to disable root detection on Android devices
-```bash
+
+<h4 style="color:##FFB6C1">disable root detection</h4>
+
+```javascript
 android root disable
 ```
-Attempts to simulate a rooted Android environment
-```bash
+
+<h4 style="color:##FFB6C1">Simulate a rooted Android environment</h4>
+
+```javascript
 android root simulate
 ```
-Exec Command
-```bash
+
+<h4 style="color:##FFB6C1">Exec Command</h4>
+
+```javascript
 android shell_exec whoami 
 ```
-Screenshot
-```bash
+
+<h4 style="color:##FFB6C1">Screenshot</h4>
+
+```javascript
 android ui screenshot /tmp/screenshot 
 ```
-List activities
-```bash
+
+<h4 style="color:##FFB6C1">List activities</h4>
+
+```javascript
 android hooking list activities
 ```
-List services
-```bash
+
+<h4 style="color:##FFB6C1">List services</h4>
+
+```javascript
 android hooking list services
 ```
-List receivers
-```bash
+
+<h4 style="color:##FFB6C1">List receivers</h4>
+
+```javascript
 android hooking list receivers 
 ```
-Getting current activity
-```bash
+
+<h4 style="color:##FFB6C1">Getting current activity</h4>
+
+```javascript
 android hooking get current_activity 
 ```
-Search Classes
-```bash
+
+<h4 style="color:##FFB6C1">Search Classes</h4>
+
+```javascript
 android hooking search classes <package.name>
 ```
-Search Methods of a Class
-```bash
+
+<h4 style="color:##FFB6C1">Search Methods of a Class</h4>
+
+```javascript
 android hooking search methods <package.name <activity.name> 
 ```
 
+<h2 style="color:#000000"Hooking Commands</h2>
 
-**Hooking Commands**
-try to dump all possible information each time the function is called
-```bash
+<h4 style="color:##FFB6C1">try to dump all possible information each time the function is called</h4>
+
+```javascript
 android hooking watch class_method <package>.<activity>.<function> --dump-args --dump-backtrace --dump-return
 ```
-Changing boolean return value of a function
-```bash
+<h4 style="color:##FFB6C1"> try to dump all possible information each time the class is called</h4>
+
+```javascript 
+android hooking watch class <package>.<activity> --dump-args --dump-backtrace --dump-return
+```
+
+<h4 style="color:##FFB6C1">Changing boolean return value of a function</h4>
+
+```javascript
 android hooking set return_value <package>.<activity>.<function> <true/false> 
 ```
-allow users to view materials while the app is minimized
-```bash
+
+<h4 style="color:##FFB6C1">allow users to view materials while the app is minimized</h4>
+
+```javascript
 android ui FLAG_SECURE false
 ```
 
-**Keystore/Intents**
-```bash
+<h2 style="color:#000000">Keystore/Intents</h2>
+
+```javascript
 android keystore list
 android intent launch_service
 android intent launch_activity <package>.<activity> (launch an activity 
@@ -95,20 +132,17 @@ android intent launch_activity <package>.<activity> (launch an activity
 ```
 
 
-**Memory**
-```bash
+<h2 style="color:#000000">Memory</h2>
+
+```javascript
 memory list modules (process in the memory)
 memory list exports <process> (export a process)
 memory search 4141 –string (search string in the memory)
 memory write <address> <string> --string (write to the memory process)
 ```
 
-**SQLite**
-```bash
+<h2 style="color:#000000">SQLite</h2>
+
+```javascript
 sqlite (interact with sqlite db)
 ```
-
-
-
-
-
