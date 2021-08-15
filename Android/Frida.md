@@ -4,10 +4,15 @@ by Or Levy
 >ℹ️ **Reference**
 
  [Download Frida-Server](https://github.com/frida/frida/releases) 
+ 
  [Hooking Methods Examples](https://neo-geo2.gitbook.io/adventures-on-security/frida-scripting-guide/methods)
+ 
  [Frida Tutorial by hacktricks](https://book.hacktricks.xyz/mobile-apps-pentesting/android-app-pentesting/frida-tutorial) 
+ 
  [SSL Unpinning Js File](https://github.com/httptoolkit/frida-android-unpinning) 
+ 
  [Js Methods Templates](https://appsec-labs.com/portal/frida-cheatsheet-for-android/)
+ 
  [Examples](https://github.com/11x256/frida-android-examples)
 
 <h2 style="color:#ffffff">Frida Installation</h2>
