@@ -3,7 +3,7 @@
         <div xmlns="http://www.w3.org/1999/xhtml">
             <style>
                 .container {
-                    border-radius: 0px;
+                    border-radius: 2px;
                     padding: 16px 16px;
                     background-color: #DFF2BF;
                     border: 1px solid rgba(79, 138, 16, 0.2);
@@ -12,7 +12,7 @@
 
                 .container svg {
                     width: 16px;
-                    height: 16px;
+                    height: 14px;
                     vertical-align: text-top;
                 }
 
