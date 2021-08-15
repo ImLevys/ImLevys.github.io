@@ -69,7 +69,7 @@ activity.func.overload("java.lang.String").implementation = function(x){
 
 <h5 style="color:#ff99dd">this. Reference</h5>
 
-> **this. ** : call the original implementation of the method, instead of reimplementing it
+> **this.** : call the original implementation of the method, instead of reimplementing it
 
 ```java
 activity.addTwoInts.implementation = function (var1,var2) {
