@@ -13,12 +13,13 @@ by Or Levy
 
 <h2 style="color:#000000">Installation</h2>
 
-```bash
+```bat
 pip3 install objection
 ```
+
 <h2 style="color:#000000">Run</h2>
 
-```bash
+```bat
 1. run frida-server on device
 2. objection --gadget <app> explore  (start objection)
 ```
@@ -27,73 +28,73 @@ pip3 install objection
 
 <h4 style="color:##FFB6C1">Path information</h4>
 
-```bash
+```bat
 env
 ```
 
 <h4 style="color:##FFB6C1">disable SSL Pinning<h/4>
 
-```bash
+```bat
 android sslpinning disable
 ```
 
 <h4 style="color:##FFB6C1">disable root detection</h4>
 
-```bash
+```bat
 android root disable
 ```
 
 <h4 style="color:##FFB6C1">Simulate a rooted Android environment</h4>
 
-```bash
+```bat
 android root simulate
 ```
 
 <h4 style="color:##FFB6C1">Exec Command</h4>
 
-```bash
+```bat
 android shell_exec whoami 
 ```
 
 <h4 style="color:##FFB6C1">Screenshot</h4>
 
-```bash
+```bat
 android ui screenshot /tmp/screenshot 
 ```
 
 <h4 style="color:##FFB6C1">List activities</h4>
 
-```bash
+```bat
 android hooking list activities
 ```
 
 <h4 style="color:##FFB6C1">List services</h4>
 
-```bash
+```bat
 android hooking list services
 ```
 
 <h4 style="color:##FFB6C1">List receivers</h4>
 
-```bash
+```bat
 android hooking list receivers 
 ```
 
 <h4 style="color:##FFB6C1">Getting current activity</h4>
 
-```bash
+```bat
 android hooking get current_activity 
 ```
 
 <h4 style="color:##FFB6C1">Search Classes</h4>
 
-```bash
+```bat
 android hooking search classes <package.name>
 ```
 
 <h4 style="color:##FFB6C1">Search Methods of a Class</h4>
 
-```bash
+```bat
 android hooking search methods <package.name <activity.name> 
 ```
 
@@ -101,30 +102,30 @@ android hooking search methods <package.name <activity.name>
 
 <h4 style="color:##FFB6C1">try to dump all possible information each time the function is called</h4>
 
-```bash
+```bat
 android hooking watch class_method <package>.<activity>.<function> --dump-args --dump-backtrace --dump-return
 ```
 <h4 style="color:##FFB6C1"> try to dump all possible information each time the class is called</h4>
 
-```bash 
+```bat 
 android hooking watch class <package>.<activity> --dump-args --dump-backtrace --dump-return
 ```
 
 <h4 style="color:##FFB6C1">Changing boolean return value of a function</h4>
 
-```bash
+```bat
 android hooking set return_value <package>.<activity>.<function> <true/false> 
 ```
 
 <h4 style="color:##FFB6C1">allow users to view materials while the app is minimized</h4>
 
-```bash
+```bat
 android ui FLAG_SECURE false
 ```
 
 <h2 style="color:#000000">Keystore/Intents</h2>
 
-```bash
+```bat
 android keystore list
 android intent launch_service
 android intent launch_activity <package>.<activity> (launch an activity 
@@ -134,7 +135,7 @@ android intent launch_activity <package>.<activity> (launch an activity
 
 <h2 style="color:#000000">Memory</h2>
 
-```bash
+```bat
 memory list modules (process in the memory)
 memory list exports <process> (export a process)
 memory search 4141 –string (search string in the memory)
@@ -143,7 +144,7 @@ memory write <address> <string> --string (write to the memory process)
 
 <h2 style="color:#000000">SQLite</h2>
 
-```bash
+```bat
 sqlite (interact with sqlite db)
 ```
 
