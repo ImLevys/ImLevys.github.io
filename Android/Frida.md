@@ -17,9 +17,7 @@ by Or Levy
 
 <h2 style="color:#ffffff">Frida Installation</h2>
 
-```diff
-! ⚠️ Must install same version of Frida server and Frida client@@
-```
+![alt text](https://raw.githubusercontent.com/ImLevys/ImLevys.github.io/c575f9cfff34f358725a559b7351a6496e23bd70/Android/images/warning-markup.svg)
 ```bash
 1. adb shell push <frida-server> /data/local/tmp/ (upload frida-server to device)
 2. adb shell chmod 755 /data/local/tmp/<frida-server>
