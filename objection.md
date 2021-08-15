@@ -1,5 +1,3 @@
-title: Objection
----
 ![[objection.png]]
 ```ad-info
 [Objection Wiki](https://github.com/sensepost/objection/wiki) 
