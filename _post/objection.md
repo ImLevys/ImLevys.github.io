@@ -1,3 +1,4 @@
+---
 title: Objection
 ---
 ![[objection.png]]
