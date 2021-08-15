@@ -16,6 +16,7 @@ by Or Levy
  [Examples](https://github.com/11x256/frida-android-examples)
 
 <h2 style="color:#ffffff">Frida Installation</h2>
+
 ```diff
 !>**⚠️ Must install same version of Frida server and Frida client**
 ```
