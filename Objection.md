@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Objection
+theme: jekyll-theme-slate
 ---
 ![[objection.png]]
 ```ad-info
