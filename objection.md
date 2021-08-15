@@ -32,7 +32,7 @@ pip3 install objection
 env
 ```
 
-<h4 style="color:#FFB6C1">disable SSL Pinning<h/4>
+<h4 style="color:#FFB6C1">disable SSL Pinning</h4>
 
 ```bash
 android sslpinning disable
