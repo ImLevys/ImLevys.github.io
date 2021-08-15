@@ -35,13 +35,13 @@ by Or Levy
 ```
 
 <h2 style="color:#ffffff">Syntax</h2>
-<h5 style="color:#ff99dd">Activity Usage</h5>
+<h5 style="color:#000000">Activity Usage</h5>
 
 ```java
 var activity = Java.use('com.example.package.activity')
 ```
 
-<h5 style="color:#ff99dd">Class Inside Class </h5> 
+<h5 style="color:#000000">Class Inside Class </h5> 
 
 ```java
 var outsideClass = Java.use('com.example.package.activity');
@@ -49,14 +49,14 @@ var insideClass = outsideClass['inside_class_name'];
 var oneLiner = Java.use('com.example.package.activity$inside_class_name');
 ```
 
-<h5 style="color:#ff99dd">Invoke a Constructor </h5>
+<h5 style="color:#000000">Invoke a Constructor </h5>
 
 ```java
 var javaString = Java.use('java.lang.String');
 var myString = javaString.$new('New String Here');  
 ```
 
-<h5 style="color:#ff99dd">Overload </h5>
+<h5 style="color:#000000">Overload </h5>
 
 > **If there are more than one function named func:** 
 > we should use overload!
@@ -66,7 +66,7 @@ activity.func.overload("int" , "int").implementation = function(x,y){
 activity.func.overload("java.lang.String").implementation = function(x){
 ```
 
-<h5 style="color:#ff99dd">this. Reference</h5>
+<h5 style="color:#000000">this. Reference</h5>
 
 > **this.** : call the original implementation of the method, instead of reimplementing it
 
@@ -77,7 +77,7 @@ activity.addTwoInts.implementation = function (var1,var2) {
 }
 ```
 
-<h5 style="color:#ff99dd">Accesing String attributes</h5>
+<h5 style="color:#000000">Accesing String attributes</h5>
 
 ```java
 var activity = Java.use("com.example.package.activity");  
@@ -86,7 +86,7 @@ activity.function.implementation = function(){
 };
 ```
 
-<h5 style="color:#ff99dd">.call function with arguments</h5>
+<h5 style="color:#000000">.call function with arguments</h5>
 
 > **call() function:** can use a method belong to another object
 
@@ -106,7 +106,7 @@ const person1 = {
 person.fullName.call(person1, "Oslo", "Norway");
 ```
 
-<h5 style="color:#ff99dd">Modify a Method - implementation</h5>
+<h5 style="color:#000000">Modify a Method - implementation</h5>
 
 ```java
 Java.perform(function () {
@@ -117,7 +117,7 @@ Java.perform(function () {
 ``` 
 
 
-<h5 style="color:#ff99dd">PoC of decryption function:</h5>
+<h5 style="color:#000000">PoC of decryption function:</h5>
 
 ![alt text](https://github.com/ImLevys/ImLevys.github.io/blob/main/Android/images/example_decypt0%201.png?raw=true)
 
