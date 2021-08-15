@@ -115,7 +115,7 @@ Java.perform(function () {
 
 ![[example_decypt0 1.png|1000]]
 
-![[example_decypt 2.png|1000]]
+![[https://github.com/ImLevys/ImLevys.github.io/blob/main/Android/images/example_decypt%202.png?raw=true|1000]]
 ![[example_decypt1.png]]
 After decrypted the string -k3FElEG9lnoWbOateGhj5pX6QsXRNJKh///8Jxi8KXW7iDpk2xRxhQ==
 we get the flag **{This_Isn't_Where_I_Parked_My_Car} **
