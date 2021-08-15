@@ -2,3 +2,6 @@ theme: jekyll-theme-cayman
 title: ImLevys
 permalink: /:title
 baseurl: ""
+
+highlighter: rouge
+markdown: kramdown
