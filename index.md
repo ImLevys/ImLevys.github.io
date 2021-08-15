@@ -60,6 +60,7 @@ var myString = javaString.$new('New String Here');
 
 > **If there are more than one function named func:** 
 > we should use overload!
+
 ```java
 activity.func.overload("int" , "int").implementation = function(x,y){
 
