@@ -58,9 +58,7 @@ var myString = javaString.$new('New String Here');
 
 <h5 style="color:#ff99dd">Overload </h5>
 
-> **If there are more than one function named func:** 
-> we should use overload!
-
+![alt text](https://raw.githubusercontent.com/ImLevys/ImLevys.github.io/53f5941e582edfee24e9573542f086f782a2b513/Android/images/overload.svg)
 ```java
 activity.func.overload("int" , "int").implementation = function(x,y){
 
@@ -89,7 +87,7 @@ activity.function.implementation = function(){
 
 <h5 style="color:#ff99dd">.call function with arguments</h5>
 
-> ℹ️ **call() function:** can use a method belong to another object
+> **call() function:** can use a method belong to another object
 
 
 ```java
