@@ -1,1 +1,103 @@
-Hello
+<p>![[frida.png]]
+by Or Levy <code>ris:Award</code></p>
+<blockquote>
+<p>ℹ️ <strong>Reference</strong></p>
+</blockquote>
+<p> <a href="https://github.com/frida/frida/releases">Download Frida-Server</a> 
+ <a href="https://neo-geo2.gitbook.io/adventures-on-security/frida-scripting-guide/methods">Hooking Methods Examples</a>
+ <a href="https://book.hacktricks.xyz/mobile-apps-pentesting/android-app-pentesting/frida-tutorial">Frida Tutorial by hacktricks</a> 
+ <a href="https://github.com/httptoolkit/frida-android-unpinning">SSL Unpinning Js File</a> 
+ <a href="https://appsec-labs.com/portal/frida-cheatsheet-for-android/">Js Methods Templates</a>
+ <a href="https://github.com/11x256/frida-android-examples">Examples</a></p>
+<h2 style="color:#ffffff">Frida Installation</h2>
+
+<blockquote>
+<p><strong>⚠️ Must install same version of Frida server and Frida client</strong></p>
+<pre><code class="lang-bash"><span class="hljs-number">1.</span> adb <span class="hljs-built_in">shell</span> push &lt;frida-server&gt; /data/<span class="hljs-built_in">local</span>/tmp/ (upload frida-server <span class="hljs-built_in">to</span> device)
+<span class="hljs-number">2.</span> adb <span class="hljs-built_in">shell</span> chmod <span class="hljs-number">755</span> /data/<span class="hljs-built_in">local</span>/tmp/&lt;frida-server&gt;
+<span class="hljs-number">3.</span> pip install frida-tools frida=&lt;<span class="hljs-built_in">version</span>&gt;
+<span class="hljs-number">4.</span> Find location <span class="hljs-keyword">of</span> frida-ps.py <span class="hljs-built_in">file</span>, <span class="hljs-built_in">add</span> <span class="hljs-keyword">the</span> path <span class="hljs-built_in">to</span> Enviorment Variables.
+</code></pre>
+</blockquote>
+<h2 style="color:#ffffff">Run Frida</h2>
+
+<pre><code class="lang-bash">1. ./data/<span class="hljs-keyword">local</span>/tmp/&lt;frida-server&gt; (<span class="hljs-keyword">on</span> device <span class="hljs-keyword">run</span> frida-server)
+2. frida-ps -<span class="hljs-keyword">U</span> (<span class="hljs-keyword">On</span> windows find <span class="hljs-keyword">app</span> fullname)
+3. frida -<span class="hljs-keyword">U</span> -f &lt;package_name&gt; -<span class="hljs-keyword">l</span> &lt;fridascript.js&gt; --<span class="hljs-keyword">no</span>-<span class="hljs-keyword">pause</span> (Inject with Frida)
+</code></pre>
+<p><h2 style="color:#ffffff">Syntax</h2></p>
+<h5 style="color:#ff99dd">Activity Usage</h5>
+
+<pre><code class="lang-java"><span class="hljs-keyword">var</span> activity = Java.<span class="hljs-keyword">use</span>(<span class="hljs-string">'com.example.package.activity'</span>)
+</code></pre>
+<h5 style="color:#ff99dd">Class Inside Class </h5> 
+
+<pre><code class="lang-java"><span class="hljs-attribute">var outsideClass</span> = Java.use(<span class="hljs-string">'com.example.package.activity'</span>);
+<span class="hljs-attribute">var insideClass</span> = outsideClass[<span class="hljs-string">'inside_class_name'</span>]; 
+<span class="hljs-attribute">var oneLiner</span> = Java.use(<span class="hljs-string">'com.example.package.activity$inside_class_name'</span>);
+</code></pre>
+<h5 style="color:#ff99dd">Invoke a Constructor </h5>
+
+<pre><code class="lang-java"><span class="hljs-attribute">var javaString</span> = Java.use(<span class="hljs-string">'java.lang.String'</span>);
+<span class="hljs-attribute">var myString</span> = javaString.$new(<span class="hljs-string">'New String Here'</span>);
+</code></pre>
+<h5 style="color:#ff99dd">Overload </h5>
+
+<blockquote>
+<p>ℹ️ <strong>If there are more than one function named func:</strong> 
+we should use overload!</p>
+</blockquote>
+<pre><code class="lang-java">activity<span class="hljs-selector-class">.func</span><span class="hljs-selector-class">.overload</span>(<span class="hljs-string">"int"</span> , <span class="hljs-string">"int"</span>)<span class="hljs-selector-class">.implementation</span> = function(x,y){
+
+activity<span class="hljs-selector-class">.func</span><span class="hljs-selector-class">.overload</span>(<span class="hljs-string">"java.lang.String"</span>)<span class="hljs-selector-class">.implementation</span> = function(x){
+</code></pre>
+<h5 style="color:#ff99dd">this. Reference</h5>
+
+<blockquote>
+<p>ℹ️ <strong>this. </strong> : call the original implementation of the method, instead of reimplementing it</p>
+</blockquote>
+<pre><code class="lang-java">activity.addTwoInts.implementation = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">var1,var2</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"the method is being called"</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.addTwoInts(var1,var2);
+}
+</code></pre>
+<h5 style="color:#ff99dd">Accesing String attributes</h5>
+
+<pre><code class="lang-java"><span class="hljs-keyword">var</span> activity = Java.use(<span class="hljs-string">"com.example.package.activity"</span>);  
+activity.function.implementation = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-keyword">this</span>.variable.value = <span class="hljs-number">10000</span>;
+};
+</code></pre>
+<h5 style="color:#ff99dd">.call function with arguments</h5>
+
+<blockquote>
+<p>ℹ️ <strong>call() function:</strong> can use a method belong to another object</p>
+</blockquote>
+<pre><code class="lang-java"><span class="hljs-keyword">const</span> person = {  
+    fullName: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(city, country)</span> </span>{  
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.firstName + <span class="hljs-string">" "</span> + <span class="hljs-keyword">this</span>.lastName + <span class="hljs-string">","</span> + city + <span class="hljs-string">","</span> + country;  
+ }  
+}  
+
+<span class="hljs-keyword">const</span> person1 = {  
+    firstName:<span class="hljs-string">"John"</span>,  
+    lastName: <span class="hljs-string">"Doe"</span>  
+}  
+<span class="hljs-comment">//This will return "John Doe,Oslo,Norway":</span>
+person.fullName.call(person1, <span class="hljs-string">"Oslo"</span>, <span class="hljs-string">"Norway"</span>);
+</code></pre>
+<h5 style="color:#ff99dd">Modify a Method - implementation</h5>
+
+<pre><code class="lang-java">Java.perform(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">var</span> activity = Java.use(<span class="hljs-string">'com.example.package.activity'</span>);
+    activity.function.overload().implementation = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span>
+    </span>{
+        <span class="hljs-keyword">var</span> i = <span class="hljs-keyword">this</span>.function(); <span class="hljs-comment">//calling the original function</span>
+</code></pre>
+<h5 style="color:#ff99dd">PoC of decryption function:</h5>
+
+<p>![[example_decypt0 1.png|1000]]</p>
+<p>![[example_decypt 2.png|1000]]
+![[example_decypt1.png]]
+After decrypted the string -k3FElEG9lnoWbOateGhj5pX6QsXRNJKh///8Jxi8KXW7iDpk2xRxhQ==
+we get the flag <strong>{This_Isn&#39;t_Where_I_Parked_My_Car} </strong></p>
