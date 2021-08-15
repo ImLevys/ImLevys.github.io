@@ -1,7 +1,7 @@
 ---
 title: Objection
 ---
-![alt text](https://github.com/ImLevys/ImLevys.github.io/blob/main/Android/images/frida.png)
+![alt text](https://github.com/ImLevys/ImLevys.github.io/blob/main/Android/images/objection.png)
 ```ad-info
 [Objection Wiki](https://github.com/sensepost/objection/wiki) 
 [Objection Tutotrial by hacktricks](https://book.hacktricks.xyz/mobile-apps-pentesting/android-app-pentesting/frida-tutorial/objection-tutorial)
