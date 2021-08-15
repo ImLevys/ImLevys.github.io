@@ -2,6 +2,7 @@
 
 by Or Levy 
 >ℹ️ **Reference**
+
  [Download Frida-Server](https://github.com/frida/frida/releases) 
  
  [Hooking Methods Examples](https://neo-geo2.gitbook.io/adventures-on-security/frida-scripting-guide/methods)
