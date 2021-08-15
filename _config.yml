@@ -1,2 +1,4 @@
 theme: jekyll-theme-slate
-title: Frida
+title: ImLevys
+permalink: /:title
+baseurl: ""
