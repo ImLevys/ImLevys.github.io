@@ -1,7 +1,7 @@
 ---
 title: Objection
 ---
-![alt text](https://github.com/ImLevys/ImLevys.github.io/blob/main/Android/images/objection.png)
+![alt text](https://github.com/ImLevys/ImLevys.github.io/blob/main/Android/images/objection.png?raw=true)
 
 by Or Levy 
 
