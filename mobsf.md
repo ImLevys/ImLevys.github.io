@@ -49,4 +49,5 @@ nox_adb devices
 
 
 ADB_BINARY = PATH TO NOX ADB.exe
+
 ![alt text](https://github.com/ImLevys/ImLevys.github.io/blob/main/Android/images/config0.png?raw=true)
