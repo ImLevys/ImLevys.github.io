@@ -24,11 +24,7 @@ run.bat 127.0.0.1:8000
 
 <h2 style="color:#000000">Dynamic Analysis</h2>
 
-![alt text](https://raw.githubusercontent.com/ImLevys/ImLevys.github.io/b9bf555a98ab16648985913a5b4774777a64cb72/Android/images/warning-markup.svg)
-
-If Dynamic Analyzer doesn't detect your android device, 
-you need to manually configure ANALYZER_IDENTIFIER 
-
+![alt text](https://raw.githubusercontent.com/ImLevys/ImLevys.github.io/bc98cca12e1a119f045a20f77f79cd5e1c23f248/Android/images/mobsf_warning.svg)
 
 <h4 style="color:#008B8B">Find Port of the device</h4>
 
@@ -46,9 +42,8 @@ nox_adb devices
 
 <h4 style="color:#008B8B">Add the following parameters:</h4>
 
-![alt text](https://raw.githubusercontent.com/ImLevys/ImLevys.github.io/fe525276e841ca505707ca9df23c768ad70511ee/Android/images/info-markup.svg)
+![alt text](https://raw.githubusercontent.com/ImLevys/ImLevys.github.io/2c2c8ab9f7795b2b3ca78cd60dcc18eb1e811317/Android/images/mobsf_info.svg)
 
-Port should be the same as the device port
 
 ![alt text](https://github.com/ImLevys/ImLevys.github.io/blob/main/Android/images/config1.png?raw=true)
 
